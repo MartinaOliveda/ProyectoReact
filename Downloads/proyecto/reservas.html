@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="dataBase.js"></script>
+<link rel="stylesheet" href="css/proyecto.css">
+</head>
+<body>
+ <!--Navbar-->
+
+
+
+ <header class="menuContainer" style="color: rgb(37, 37, 37)">
+    <nav style="color: rgb(37, 37, 37)">
+       <span>
+          <a href="index.html" style="color: rgb(37, 37, 37)">
+             Kenton Palace Hotel
+          </a>  
+       </span>
+       <ul class="menu">
+          <li class="li2">
+             <a href="index.html" style="color: rgb(37, 37, 37)">HOME</a> 
+          </li>
+          <li class="li3">
+             <a id="galeria" href="galeria.html" style="color: rgb(37, 37, 37)">GALERIA</a>
+          </li>
+          <li class="li4">
+             <a id="habitaciones" href="habitaciones.html" style="color: rgb(37, 37, 37)">HABITACIONES</a>
+          </li>
+          <li class="li5">
+             <a id="servicios" href="servicios.html" style="color: rgb(37, 37, 37)">SERVICIOS</a>
+          </li>
+          <li class="nav-item">
+             <button id="en" class="" onclick="langEN()" style="color: rgb(37, 37, 37)">EN</button>
+          </li>
+          <!--Script de pagina en ingles-->
+             <script>
+             function langEN(){
+             let galeria = document.getElementById("galeria");
+             galeria.innerHTML = "GALLERY";
+             let habitaciones = document.getElementById("habitaciones");
+             habitaciones.innerHTML = "BEDROOMS";
+             let servicios = document.getElementById("servicios");
+             servicios.innerHTML = "SERVICES";
+             let reservas = document.getElementById("reservas");
+             reservas.innerHTML = "RESERVATIONS";
+             }
+          
+             </script>
+             <li class="nav-item">
+             <button id="por" class="" onclick="langPOR()" style="color: rgb(37, 37, 37)">POR</button>
+             </li>
+             
+             <!--Script de pagina en portugués-->
+             <script>
+             function langPOR(){
+                let galeria = document.getElementById("galeria");
+                galeria.innerHTML = "GALERIA";
+                let habitaciones = document.getElementById("habitaciones");
+                habitaciones.innerHTML = "APARTAMENTO";
+                let servicios = document.getElementById("servicios");
+                servicios.innerHTML = "SERVIÇOS";
+                let eventos = document.getElementById("eventos");
+                let reservas = document.getElementById("reservas");
+                reservas.innerHTML = "RESERVÇOES";
+                return ajustarTitulo();
+                
+             }
+             </script>
+ 
+             <li class="nav-item">
+             <button id="es" class="" onclick="langES()" style="color: rgb(37, 37, 37)">ES</button>
+             </li>
+ 
+          
+             <script>
+             function langES(){
+                let galeria = document.getElementById("galeria");
+                galeria.innerHTML = "GALERIA";
+                let habitaciones = document.getElementById("habitaciones");
+                habitaciones.innerHTML = "HABITACIONES";
+                let servicios = document.getElementById("servicios");
+                servicios.innerHTML = "SERVICIOS";
+                let eventos = document.getElementById("eventos");
+                let reservas = document.getElementById("reservas");
+                reservas.innerHTML = "RESERVAS";
+                let presentacion1= document.getElementById("presentacion1");
+                presentacion1.innerHTML = "Your trip begins now";
+                let presentacion2= document.getElementById("presentacion2");
+                presentacion2.innerHTML = "The best way to experience Bariloche";
+             }
+             </script>
+          </ul>
+    </nav>
+    </header>
+    <!--Fin Navbar-->
+ 
+<br><br><br>
+<h2>1. Información de la reserva</h2>
+
+<p>Cantidad de Habitaciones</p>
+<input type="number" min="1" max="10" id="cantHabitaciones" value="0">
+<br>
+<p>Cantidad de adultos</p>
+<input type="number" min="1" max="2" id="cantAdultos" value="0">
+<p>Cantidad de niños (3-11 años)</p>
+<input type="number" min="0" max="2" id="cantNinos" value="0">
+<p>Cantidad de niños(0-2 años)</p>
+<input type="number" min="0" max="2" id="cantNinos1" value="0">
+<br>
+<p>Fecha de Check-In</p>
+<p>Fecha de Check-Out</p>
+
+<hr>
+
+<h2>2. Selección de habitación</h2>
+<div class="habitacionesContainer">
+    <a id="clasica" onclick="seleccionar(this.id);">
+        <img src="multimedia/reservaclasica.jpg" class="ajustarHabitaciones" alt="habitación clásica">
+    </a>
+    <a id="family" onclick="seleccionar(this.id);">
+        <img src="multimedia/reservafamily.jpg" class="ajustarHabitaciones" alt="habitación family">
+    </a>
+    <a id="suite" onclick="seleccionar(this.id);">
+      <img src="multimedia/reservasuite.jpg" class="ajustarHabitaciones" alt="suite">
+  </a>
+    
+</div>
+<div id="infoContainer" class="seleccionarHabitacion">
+
+</div>
+
+<script src="seleccionar.js"></script>
+</body>
+</html>
